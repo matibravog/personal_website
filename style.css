@@ -1,0 +1,183 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(50deg, #000000, #000000);
+    color: white;
+    text-align: center;
+    overflow-x: hidden; /* To prevent horizontal scrolling */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10; /* Ensure header is on top */
+    box-sizing: border-box; /* Ensure padding doesn't affect layout */
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0; /* Remove default margin */
+}
+
+button.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+}
+
+nav {
+    display: flex;
+    align-items: center; /* Center the items */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00c6ff;
+}
+
+/* For the Hero section */
+#hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    z-index: 0; /* Make sure content comes on top */
+}
+
+canvas {
+    position: fixed; /* Make canvas fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure canvas stays in the background */
+}
+
+section {
+    position: relative;
+    padding: 50px 20px;
+    z-index: 5; /* Ensure sections are above the canvas */
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: center; /* Center the header content */
+        text-align: center;
+        padding: 10px 20px;
+    }
+
+    header h1 {
+        margin-right: 15px; /* Add some space between the name and hamburger */
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav ul {
+        display: none; /* Hide the navigation menu by default */
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+    }
+
+    nav ul.active {
+        display: flex; /* Show the menu when active */
+    }
+
+    nav ul li {
+        margin: 15px 0; /* Spacing between items when in column layout */
+    }
+
+    button.hamburger {
+        display: block;
+        margin-left: 20px; /* Ensure space between the name and hamburger */
+    }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matías Bravo - Aerospace Engineering Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>MBG</h1>
+        <button class="hamburger" aria-label="Open Menu">☰</button>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="hero">
+        <canvas id="threejs-canvas"></canvas>
+        <h2>Aerospace Engineering | Science, Art & Tech</h2>
+        <p>Exploring new frontiers in technology and aerospace systems. Let's innovate together!</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card" onclick="openModal('project1')">
+                <h3>Rocket Trajectory Simulation</h3>
+                <p>Developed a Python-based simulation for launch trajectory analysis using real-world physics.</p>
+            </div>
+            <div class="project-card" onclick="openModal('project2')">
+                <h3>RC Car Optimization</h3>
+                <p>Designed and built a high-speed RC car, optimizing weight and power efficiency within budget constraints.</p>
+            </div>
+            <div class="project-card" onclick="openModal('project3')">
+                <h3>Thrust vectoring control</h3>
+                <p>Electromechanical system capable of controlling a dron/rocket motor using servos and sensors</p>
+            </div>
+            <div class="project-card" onclick="openModal('project4')">
+                <h3>Telemetry system</h3>
+                <p>Arduino based telemetry system for experimental rocket using COTS components</p>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a passionate aerospace engineer with a deep interest in software development, robotics, and computational simulations. I have experience working on real-world projects that combine physics, data science, and cutting-edge technologies. I strive to push the boundaries of what's possible, exploring innovative solutions in every challenge I face.</p>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Python (Data Analysis, Machine Learning, Simulation)</li>
+            <li>C++ (Embedded Systems, High-performance Computing)</li>
+            <li>JavaScript (Web Development, 3D Graphics)</li>
+            <li>3D Modeling (Blender, SolidWorks)</li>
+            <li>Machine Learning (Neural Networks, Deep Learning)</li>
+            <li>Aerospace Systems (Trajectory Simulation, Flight Dynamics)</li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out for collaborations, consultations, or inquiries!</p>
+        <a href="mailto:matias@bravo.com">Email Me</a>
+    </section>
+    <!-- Modal Structure -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
