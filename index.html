@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matías Bravo - Aerospace Engineering Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
@@ -12,45 +12,149 @@
         <button class="hamburger" aria-label="Open Menu">☰</button>
         <nav>
             <ul>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <section id="hero">
         <canvas id="threejs-canvas"></canvas>
-        <h2>Aerospace Engineering | Science, Art & Tech</h2>
-        <p>Exploring new frontiers in technology and aerospace systems. Let's innovate together!</p>
+        <h2 class="herotitle">Aerospace Engineering | Science, Art & Tech</h2>
+        <p class="herodesc">Exploring new frontiers in technology and aerospace systems. Let's innovate together!</p>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
         <div class="project-grid">
             <div class="project-card" onclick="openModal('project1')">
-                <h3>Rocket Trajectory Simulation</h3>
-                <p>Developed a Python-based simulation for launch trajectory analysis using real-world physics.</p>
+                <h3>Project Lead - Experimental rocketry team</h3>
+                <img class="project-img cohete1 " src="./assets/images/projects/cohete/1.JPG" alt="image">
+                <img class="project-img cohete2" src="./assets/images/projects/cohete/2.JPG" alt="image">
+                <p>Led the development of an experimental sounding rocket within a multidisciplinary university team, combining technical leadership with hands-on engineering work.
+                    In addition to coordinating the team and defining system-level architecture, actively contributed to the design, manufacturing, and integration of multiple subsystems.
+                    Responsible for planning and executing engine static tests, subsystem qualification tests, and full vehicle integration campaigns, as well as coordinating launch operations and post-flight analysis.</p>
+            </div>
+            <div class="project-card" onclick="openModal('project4')">
+                <h3>Rocket Telemetry System Development</h3>
+                <img class="project-img tlm1 img-y-70" src="./assets/images/projects/telemetria/10.jpeg" alt="image">
+                <img class="project-img tlm2 img-y-55" src="./assets/images/projects/telemetria/5.jpg" alt="image">
+                <p>Designed and implemented an onboard telemetry system for an experimental rocket, enabling real-time transmission of flight data to a ground station.
+                    The system integrates multiple sensors, embedded processing, and RF communication to monitor key flight parameters such as altitude, acceleration, system status, and timing events.
+                    Focused on reliability, data integrity, and robustness under dynamic flight conditions.</p>
+            </div>
+                        <div class="project-card" onclick="openModal('project1')">
+                <h3>Rocket Recovery System Development</h3>
+                <img class="project-img img-y-60" src="./assets/images/projects/recuperacion/1.jpg" alt="image">
+                <img class="project-img img-y-60" src="./assets/images/projects/recuperacion/2.jpg" alt="image">
+                <p>Developed and tested a recovery system to ensure safe descent and vehicle retrieval after flight.
+                    The work included deployment logic design, actuator selection, and integration with onboard avionics.
+                    Ground testing and iterative refinement were conducted to validate deployment timing, mechanical reliability, and system redundancy under simulated flight conditions.</p>
             </div>
             <div class="project-card" onclick="openModal('project2')">
-                <h3>RC Car Optimization</h3>
-                <p>Designed and built a high-speed RC car, optimizing weight and power efficiency within budget constraints.</p>
+                <h3>RC Car Design, Manufacturing & Optimization</h3>
+                <img class="project-img img-y-80" src="./assets/images/projects/auto/1.jpg" alt="image">
+                <img class="project-img img-y-60" src="./assets/images/projects/auto/2.jpg" alt="image">
+                <p>Designed and manufactured a high-performance RC vehicle with a focus on mechanical optimization, weight reduction, and power efficiency.
+The project involved iterative design, component selection, and fabrication, followed by experimental testing to evaluate vehicle dynamics and performance.
+Additionally, implemented a control system to enable autonomous driving, integrating sensing, actuation, and embedded control logic to achieve stable and repeatable vehicle behavior under different operating conditions.</p>
             </div>
             <div class="project-card" onclick="openModal('project3')">
                 <h3>Thrust vectoring control</h3>
-                <p>Electromechanical system capable of controlling a dron/rocket motor using servos and sensors</p>
+                <img class="project-img img-y-60" src="./assets/images/projects/tvc/1.jpg" alt="image">
+                <img class="project-img img-y-45" src="./assets/images/projects/tvc/2.jpg" alt="image">
+                <p>Designed and built a ground-based test bench for evaluating thrust vector control mechanisms.
+The work included the mechanical design and manufacturing of the TVC mechanism, development of the required electronics and embedded control hardware, and integration of actuators and sensors.
+The test bench was used to characterize system dynamics, control authority, and repeatability, serving as a validation platform prior to potential flight integration.</p>
             </div>
-            <div class="project-card" onclick="openModal('project4')">
-                <h3>Telemetry system</h3>
-                <p>Arduino based telemetry system for experimental rocket using COTS components</p>
+
+            <div class="project-card" onclick="openModal('project1')">
+                <h3>Rocket Trajectory Simulation</h3>
+                <img src="./assets/images/projects/simulador/1.png" alt="image">
+                <img src="./assets/images/projects/simulador/2.png" alt="image">
+                <p>Developed a ballistic trajectory simulation tool in Python to model and analyze projectile motion under realistic physical conditions.
+The simulator incorporates numerical integration techniques and physical models to evaluate the influence of initial conditions, forces, and system parameters on trajectory behavior.
+Used as a design and analysis tool to support engineering decisions and validate theoretical models against expected system performance.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Parallax separator -->
+<!-- <section class="parallax-transition"></section> -->
+
+<!-- Asclepios Project -->
+<section id="asclepios">
+    <div class="asclepios-card">
+        <div class="asclepios-text">
+            <h2>Asclepios Mission – Information Technology Officer (Switzerland)</h2>
+
+            <p>
+                Participated as an Information Technology Officer (ITO) in the Asclepios space mission simulation program in Switzerland,
+                an international initiative focused on training students for future human spaceflight and mission operations.
+            </p>
+            <p>
+                As part of the IT team, I was responsible for supporting mission-critical software and communication systems,
+                ensuring system availability, monitoring performance, and assisting operational teams during simulated mission phases.
+            </p>
+            <p>
+                This role required working under time-critical conditions, coordinating with international and multidisciplinary teams,
+                and applying engineering and IT knowledge in an operational environment, contributing significantly to my
+                technical growth and professional development.
+            </p>
+
+        </div>
+
+        <!-- Image carousel -->
+        <div class="asclepios-carousel">
+<div class="carousel-track">
+    <img src="./assets/images/projects/suiza/1.jpg" alt="Asclepios image">
+    <img src="./assets/images/projects/suiza/2.jpg" alt="Asclepios image">
+    <img src="./assets/images/projects/suiza/3.jpg" alt="Asclepios image">
+    <img src="./assets/images/projects/suiza/4.jpg" alt="Asclepios image">
+    <img src="./assets/images/projects/suiza/5.jpg" alt="Asclepios image">
+
+    <!-- DUPLICADO para loop infinito -->
+    <img src="./assets/images/projects/suiza/1.jpg" alt="Asclepios image">
+    <img src="./assets/images/projects/suiza/2.jpg" alt="Asclepios image">
+    <img src="./assets/images/projects/suiza/3.jpg" alt="Asclepios image">
+    <img src="./assets/images/projects/suiza/4.jpg" alt="Asclepios image">
+    <img src="./assets/images/projects/suiza/5.jpg" alt="Asclepios image">
+</div>
+
+        </div>
+    </div>
+</section>
+
+
+    <section id="about">
+        <div class="about-card">
+            <img src="./assets/images/projects/suiza/1.jpg" alt="Me">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>I'm a passionate aerospace engineering student with a deep interest in software development, robotics, and computational simulations. I have experience working on real-world projects that combine physics, data science, and cutting-edge technologies. I strive to push the boundaries of what's possible, exploring innovative solutions in every challenge I face.</p>
             </div>
         </div>
     </section>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I'm a passionate aerospace engineer with a deep interest in software development, robotics, and computational simulations. I have experience working on real-world projects that combine physics, data science, and cutting-edge technologies. I strive to push the boundaries of what's possible, exploring innovative solutions in every challenge I face.</p>
-    </section>
+
     <section id="skills">
+        <div class="skills-card">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li><strong>Mechanical Design:</strong> Inventor, Fusion 360, Onshape, AutoCAD</li>
+                <li><strong>Aerodynamics:</strong> Ansys Fluent</li>
+                <li><strong>Manufacturing:</strong> Additive manufacturing (3D printing), Conventional machining</li>
+                <li><strong>Electronics:</strong> KiCad, Microcontrollers, Sensors, Actuators</li>
+                <li><strong>Software:</strong> Arduino, Python, MATLAB, Git/GitHub</li>
+                <li><strong>Web Development:</strong> HTML, CSS, JavaScript</li>
+                <li><strong>Audiovisual Creation:</strong> DaVinci Resolve, Inkscape</li>
+                <li><strong>Systems Engineering & Team Management:</strong> Microsoft Office</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- <section id="skills">
         <h2>Skills</h2>
         <ul>
             <li>Python (Data Analysis, Machine Learning, Simulation)</li>
@@ -60,12 +164,41 @@
             <li>Machine Learning (Neural Networks, Deep Learning)</li>
             <li>Aerospace Systems (Trajectory Simulation, Flight Dynamics)</li>
         </ul>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Feel free to reach out for collaborations, consultations, or inquiries!</p>
-        <a href="mailto:matias@bravo.com">Email Me</a>
-    </section>
+    </section> -->
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Feel free to reach out for collaborations, consultations, or inquiries!</p>
+
+    <div class="contact-buttons">
+        <a href="mailto:matbravo2022@udec.cl" class="contact-btn email">
+            <img src="./assets/images/contact/email-logo-png-13.png" alt="Email">
+            <span>Email</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/matias-bravo-ba50441a6/" target="_blank" class="contact-btn linkedin">
+            <img src="./assets/images/contact/linkedin.png" alt="LinkedIn">
+            <span>LinkedIn</span>
+        </a>
+
+        <a href="https://github.com/matibravog" target="_blank" class="contact-btn github">
+            <img src="./assets/images/contact/GitHub-Logo.png" alt="Github">
+            <span>GitHub</span>
+        </a>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <p>
+            © <span id="year"></span> Matías Bravo — Aerospace Engineering Portfolio
+        </p>
+        <p class="footer-meta">
+            Designed & developed by Matías Bravo · Concepción, Chile
+        </p>
+    </div>
+</footer>
+
+
     <!-- Modal Structure -->
     <div id="modal" class="modal">
         <div class="modal-content">
@@ -75,6 +208,6 @@
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
